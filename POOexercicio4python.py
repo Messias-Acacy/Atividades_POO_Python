@@ -1,6 +1,6 @@
 class Atleta():
-    def __init__(self,peso,aposentado=False):
-        self.aposentado = aposentado
+    def __init__(self,peso):
+        self.aposentado = False
         self.peso = peso
         self.aquecido=False
     def Aposentar(self):
@@ -19,8 +19,8 @@ class Atleta():
             else:
                 print('O atleta já está aquecido')
 class Nadador(Atleta):
-    def __init__(self, peso, aposentado=False):
-        super().__init__(peso, aposentado)
+    def __init__(self, peso):
+        super().__init__(peso)
     def Nadar(self):
         if self.aquecido:
             print('Seu atleta nadou!')
@@ -28,8 +28,8 @@ class Nadador(Atleta):
             print('Não se pode nadar sem aquecimento antes!')
     
 class Ciclista(Atleta):
-    def __init__(self, peso, aposentado=False):
-        super().__init__(peso, aposentado)
+    def __init__(self,peso):
+        super().__init__(peso)
     
     def Pedalar(self):
         if self.aquecido:
@@ -37,8 +37,8 @@ class Ciclista(Atleta):
         else:
             print('Você precisa se aquecer antes de pedalar!')
 class Corredor(Atleta):
-    def __init__(self, peso, aposentado=False):
-        super().__init__(peso, aposentado)
+    def __init__(self, peso):
+        super().__init__(peso)
     
     def Correr(self):
         if self.aquecido:
@@ -46,8 +46,8 @@ class Corredor(Atleta):
         else:
             print('Você não pode correr antes de se aquecer!')
 class Triatleta(Corredor,Nadador,Ciclista):
-    def __init__(self, peso, aposentado=False):
-        super().__init__(peso, aposentado)
+    def __init__(self, peso):
+        super().__init__(peso)
 
 joao = Triatleta(50)
 joao.aquecer()

@@ -33,13 +33,13 @@ class Vaca(Animal):
     def Muir(self):
         print(f'O {self.nome} muiu...')
 
-animal_1 = Gato('cinzento','Azul')
+animal_1 = Gato('cinzento','branco')
 print(vars(animal_1))
 
 animal_1.Miar()
 animal_1.comer()
 
-animal_2 = Cachorro('gor','caramelo')
+animal_2 = Cachorro('hulck','caramelo')
 animal_2.Latir()
 animal_2.comer()
 
@@ -47,6 +47,6 @@ animal_3 = Coelho('Floquinho','Branco')
 animal_3.Pular()
 animal_3.comer()
 
-animal_4 = Vaca('Mimosa','Branca')
+animal_4 = Vaca('Mimosa','Branco')
 animal_4.Muir()
 animal_4.comer()
